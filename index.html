@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abba Studio | Mobile & Web Innovation</title>
+  <link rel="icon" type="image/png" href="assets/logo/Abba_transparent.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/js/index.js">
+
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo/Abba_transparent.png" alt="Abba Studio" />
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobileNav">
+      <a href="#about" data-tr-en="About" data-tr-tr="Hakkımızda">About</a>
+      <a href="#projects" data-tr-en="Projects" data-tr-tr="Projeler">Projects</a>
+      <a href="#contact" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
+      <button class="btn-outline" onclick="toggleLang()">EN / TR</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 id="hero-title" data-tr-en="We design web & mobile experiences" data-tr-tr="Web ve mobil deneyimler tasarlıyoruz">We design web & mobile experiences</h1>
+    <p id="hero-desc" data-tr-en="We craft beautiful and functional digital solutions for modern businesses." data-tr-tr="Modern işletmeler için güzel ve işlevsel dijital çözümler üretiyoruz.">We craft beautiful and functional digital solutions for modern businesses.</p>
+    <button class="btn-primary" id="get-started" data-tr-en="Get Started" data-tr-tr="Başla">Get Started</button>
+  </section>
+
+  <div class="banner-carousel-container">
+    <div class="banner-carousel-texts" id="bannerTexts">
+      <span data-tr-en="Innovative interfaces" data-tr-tr="Yenilikçi arayüzler">Innovative interfaces</span>
+      <span data-tr-en="Mobile-first design" data-tr-tr="Mobil öncelikli tasarım">Mobile-first design</span>
+      <span data-tr-en="Scalable solutions" data-tr-tr="Ölçeklenebilir çözümler">Scalable solutions</span>
+      <span data-tr-en="Cross-platform apps" data-tr-tr="Çapraz platform uygulamalar">Cross-platform apps</span>
+      <span data-tr-en="User-centered development" data-tr-tr="Kullanıcı odaklı geliştirme">User-centered development</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <h2 data-tr-en="About Us" data-tr-tr="Hakkımızda">About Us</h2>
+    <p data-tr-en="We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems." data-tr-tr="Abba Studio olarak, fikirleri tam donanımlı çapraz platform uygulamalara ve ölçeklenebilir web sistemlerine dönüştürmeye tutkuyla bağlı bir ekibiz.">We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 data-tr-en="Our Projects" data-tr-tr="Projelerimiz">Our Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3 data-tr-en="Campus Navigator" data-tr-tr="Kampüs Yönlendirici">Campus Navigator</h3>
+        <p data-tr-en="QR-based indoor navigation app designed for universities and campuses." data-tr-tr="Üniversiteler ve kampüsler için QR tabanlı iç mekan yönlendirme uygulaması.">QR-based indoor navigation app designed for universities and campuses.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr-en="Realtime Chat" data-tr-tr="Gerçek Zamanlı Sohbet">Realtime Chat</h3>
+        <p data-tr-en="Instant messaging platform powered by Firebase with a sleek UI." data-tr-tr="Firebase destekli, şık arayüze sahip anlık mesajlaşma platformu.">Instant messaging platform powered by Firebase with a sleek UI.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr-en="Task Flow" data-tr-tr="Görev Akışı">Task Flow</h3>
+        <p data-tr-en="Productivity and task management tool built with Angular and Firebase." data-tr-tr="Angular ve Firebase ile geliştirilen verimlilik ve görev yönetim aracı.">Productivity and task management tool built with Angular and Firebase.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-tr-en="© 2025 Abba Studio. All rights reserved." data-tr-tr="© 2025 Abba Studio. Tüm hakları saklıdır.">&copy; 2025 Abba Studio. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>
