@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abba Studio | Mobile & Web Innovation</title>
+  <link rel="icon" type="image/png" href="assets/logo/Abba_transparent.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/js/index.js">
+<style>
+        :root {
+      --bg: #0e0e10;
+      --text: #ffffff;
+      --text-muted: #888888;
+      --mint: #00f5a0;
+      --card: #1a1a1a;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: var(--bg);
+      border-bottom: 1px solid #222;
+      z-index: 1001;
+    }
+    .logo img {
+      height: 36px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      color: var(--text);
+      border: none;
+      cursor: pointer;
+      z-index: 1002;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    nav a, nav button {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover,
+    nav button:hover {
+      color: var(--mint);
+    }
+    .btn-outline {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--mint);
+      border-radius: 20px;
+      color: var(--mint);
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      background: radial-gradient(circle at top, #1e1e1e, var(--bg));
+      margin-top: 64px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      max-width: 700px;
+      margin: auto;
+    }
+    .hero p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+      font-size: 1.1rem;
+    }
+    .btn-primary {
+      background: var(--mint);
+      color: #0e0e10;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      min-width: 160px;
+      text-align: center;
+    }
+    .banner-carousel-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #111;
+      padding: 1rem 0;
+    }
+    .banner-carousel-texts {
+      display: inline-block;
+      white-space: nowrap;
+      animation: bannerScroll 20s linear infinite;
+    }
+    .banner-carousel-texts span {
+      display: inline-block;
+      margin: 0 3rem;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+    }
+    @keyframes bannerScroll {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      color: var(--mint);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .section p {
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+      justify-content: center;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      flex: 1 1 300px;
+      max-width: 360px;
+    }
+    .card h3 {
+      color: var(--mint);
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #222;
+      background: #0b0b0b;
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: var(--bg);
+        flex-direction: column;
+        padding: 4rem 1rem 1rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+        z-index: 1000;
+      }
+      nav.active {
+        right: 0;
+      }
+      nav a, nav button {
+        width: 100%;
+        text-align: left;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo/Abba_transparent.png" alt="Abba Studio" />
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobileNav">
+      <a href="#about" data-tr-en="About" data-tr-tr="Hakkımızda">About</a>
+      <a href="#projects" data-tr-en="Projects" data-tr-tr="Projeler">Projects</a>
+      <a href="#contact" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
+      <button class="btn-outline" onclick="toggleLang()">EN / TR</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 id="hero-title" data-tr-en="We design web & mobile experiences" data-tr-tr="Web ve mobil deneyimler tasarlıyoruz">We design web & mobile experiences</h1>
+    <p id="hero-desc" data-tr-en="We craft beautiful and functional digital solutions for modern businesses." data-tr-tr="Modern işletmeler için güzel ve işlevsel dijital çözümler üretiyoruz.">We craft beautiful and functional digital solutions for modern businesses.</p>
+    <button class="btn-primary" id="get-started" data-tr-en="Get Started" data-tr-tr="Başla">Get Started</button>
+  </section>
+
+  <div class="banner-carousel-container">
+    <div class="banner-carousel-texts" id="bannerTexts">
+      <span data-tr-en="Innovative interfaces" data-tr-tr="Yenilikçi arayüzler">Innovative interfaces</span>
+      <span data-tr-en="Mobile-first design" data-tr-tr="Mobil öncelikli tasarım">Mobile-first design</span>
+      <span data-tr-en="Scalable solutions" data-tr-tr="Ölçeklenebilir çözümler">Scalable solutions</span>
+      <span data-tr-en="Cross-platform apps" data-tr-tr="Çapraz platform uygulamalar">Cross-platform apps</span>
+      <span data-tr-en="User-centered development" data-tr-tr="Kullanıcı odaklı geliştirme">User-centered development</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <h2 data-tr-en="About Us" data-tr-tr="Hakkımızda">About Us</h2>
+    <p data-tr-en="We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems." data-tr-tr="Abba Studio olarak, fikirleri tam donanımlı çapraz platform uygulamalara ve ölçeklenebilir web sistemlerine dönüştürmeye tutkuyla bağlı bir ekibiz.">We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 data-tr-en="Our Projects" data-tr-tr="Projelerimiz">Our Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3 data-tr-en="Campus Navigator" data-tr-tr="Kampüs Yönlendirici">Campus Navigator</h3>
+        <p data-tr-en="QR-based indoor navigation app designed for universities and campuses." data-tr-tr="Üniversiteler ve kampüsler için QR tabanlı iç mekan yönlendirme uygulaması.">QR-based indoor navigation app designed for universities and campuses.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr-en="Realtime Chat" data-tr-tr="Gerçek Zamanlı Sohbet">Realtime Chat</h3>
+        <p data-tr-en="Instant messaging platform powered by Firebase with a sleek UI." data-tr-tr="Firebase destekli, şık arayüze sahip anlık mesajlaşma platformu.">Instant messaging platform powered by Firebase with a sleek UI.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr-en="Task Flow" data-tr-tr="Görev Akışı">Task Flow</h3>
+        <p data-tr-en="Productivity and task management tool built with Angular and Firebase." data-tr-tr="Angular ve Firebase ile geliştirilen verimlilik ve görev yönetim aracı.">Productivity and task management tool built with Angular and Firebase.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-tr-en="© 2025 Abba Studio. All rights reserved." data-tr-tr="© 2025 Abba Studio. Tüm hakları saklıdır.">&copy; 2025 Abba Studio. All rights reserved.</p>
+  </footer>
+<script>
+        const nav = document.getElementById('mobileNav');
+    function toggleMenu() {
+      nav.classList.toggle('active');
+    }
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !e.target.classList.contains('menu-toggle')) {
+        nav.classList.remove('active');
+      }
+    });
+
+    let lang = 'en';
+    function toggleLang() {
+      lang = lang === 'en' ? 'tr' : 'en';
+      document.querySelectorAll('[data-tr-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-tr-${lang}`);
+      });
+    }
+
+    window.onload = () => {
+      toggleLang(); toggleLang();
+    };
+
+</script>
+
+</body>
+</html>

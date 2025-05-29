@@ -191,3 +191,9 @@
         padding: 0.5rem 0;
       }
     }
+    .card.hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 245, 160, 0.3); /* mint rengi gölge */
+  transition: all 0.3s ease;
+}
+

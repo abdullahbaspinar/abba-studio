@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/logo/Abba_transparent.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/js/index.js">
+<script src="/js/index.js" defer></script>
 
 </head>
 <body>
@@ -48,19 +48,20 @@
   <section class="section" id="projects">
     <h2 data-tr-en="Our Projects" data-tr-tr="Projelerimiz">Our Projects</h2>
     <div class="projects">
-      <div class="card">
-        <h3 data-tr-en="Campus Navigator" data-tr-tr="Kampüs Yönlendirici">Campus Navigator</h3>
-        <p data-tr-en="QR-based indoor navigation app designed for universities and campuses." data-tr-tr="Üniversiteler ve kampüsler için QR tabanlı iç mekan yönlendirme uygulaması.">QR-based indoor navigation app designed for universities and campuses.</p>
-      </div>
-      <div class="card">
-        <h3 data-tr-en="Realtime Chat" data-tr-tr="Gerçek Zamanlı Sohbet">Realtime Chat</h3>
-        <p data-tr-en="Instant messaging platform powered by Firebase with a sleek UI." data-tr-tr="Firebase destekli, şık arayüze sahip anlık mesajlaşma platformu.">Instant messaging platform powered by Firebase with a sleek UI.</p>
-      </div>
-      <div class="card">
-        <h3 data-tr-en="Task Flow" data-tr-tr="Görev Akışı">Task Flow</h3>
-        <p data-tr-en="Productivity and task management tool built with Angular and Firebase." data-tr-tr="Angular ve Firebase ile geliştirilen verimlilik ve görev yönetim aracı.">Productivity and task management tool built with Angular and Firebase.</p>
-      </div>
-    </div>
+  <div class="card hoverable" onclick="location.href='realtimeChat.html'" style="cursor: pointer;">
+  <h3 data-tr-en="Realtime Chat" data-tr-tr="Gerçek Zamanlı Sohbet">Realtime Chat</h3>
+  <p data-tr-en="Instant messaging platform powered by Firebase with a sleek UI." data-tr-tr="Firebase destekli, şık arayüze sahip anlık mesajlaşma platformu.">
+    Instant messaging platform powered by Firebase with a sleek UI.
+  </p>
+</div>
+
+
+  <div class="card" style="opacity: 0.4; pointer-events: none;">
+    <h3 data-tr-en="Coming Soon" data-tr-tr="Yakında">Coming Soon</h3>
+    <p data-tr-en="More innovative projects are on the way." data-tr-tr="Daha fazla yenilikçi proje yolda.">More innovative projects are on the way.</p>
+  </div>
+</div>
+
   </section>
 
   <footer>
