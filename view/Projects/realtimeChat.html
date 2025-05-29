@@ -25,32 +25,60 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1 data-tr-en="Realtime Chat Platform" data-tr-tr="Gerçek Zamanlı Sohbet Platformu">Realtime Chat Platform</h1>
-    <p data-tr-en="Experience instant messaging with Firebase-powered infrastructure and a sleek UI." data-tr-tr="Firebase altyapısı ve şık arayüzüyle anlık mesajlaşma deneyimi yaşayın.">
-      Experience instant messaging with Firebase-powered infrastructure and a sleek UI.
-    </p>
-    <a href="https://message-app-wine.vercel.app" class="btn-primary" target="_blank" data-tr-en="Try App" data-tr-tr="Uygulmayı Dene">Try App</a>
+  <!-- 👇 HERO Section with Background Mockup -->
+  <section class="hero" style="position: relative; overflow: hidden;">
+    <!-- Background mockup image -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/RealtimeChatMockUp.jpeg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+      filter: blur(5px);
+      z-index: 0;
+    "></div>
+
+    <!-- Foreground content -->
+    <div style="position: relative; z-index: 1;">
+      <h1 data-tr-en="Realtime Chat Platform" data-tr-tr="Gerçek Zamanlı Sohbet Platformu">
+        Realtime Chat Platform
+      </h1>
+      <p data-tr-en="Experience instant messaging with Firebase-powered infrastructure and a sleek UI."
+         data-tr-tr="Firebase altyapısı ve şık arayüzüyle anlık mesajlaşma deneyimi yaşayın.">
+        Experience instant messaging with Firebase-powered infrastructure and a sleek UI.
+      </p>
+      <a href="https://message-app-wine.vercel.app"
+         class="btn-primary"
+         target="_blank"
+         data-tr-en="Try App"
+         data-tr-tr="Uygulamayı Dene">
+         Try App
+      </a>
+    </div>
   </section>
 
   <section class="section">
     <h2 data-tr-en="Key Features" data-tr-tr="Öne Çıkan Özellikler">Key Features</h2>
     <div class="projects">
-      <div class="card">
+      <div class="card hoverable">
         <h3 data-tr-en="Real-Time Messaging" data-tr-tr="Gerçek Zamanlı Mesajlaşma">Real-Time Messaging</h3>
-        <p data-tr-en="Send and receive messages instantly using Firebase Realtime Database." data-tr-tr="Firebase Realtime Database kullanarak anında mesaj gönderip alın.">
+        <p data-tr-en="Send and receive messages instantly using Firebase Realtime Database."
+           data-tr-tr="Firebase Realtime Database kullanarak anında mesaj gönderip alın.">
           Send and receive messages instantly using Firebase Realtime Database.
         </p>
       </div>
-      <div class="card">
+      <div class="card hoverable">
         <h3 data-tr-en="Modern UI" data-tr-tr="Modern Arayüz">Modern UI</h3>
-        <p data-tr-en="Clean, responsive design tailored for web and mobile." data-tr-tr="Web ve mobil için tasarlanmış sade, duyarlı tasarım.">
+        <p data-tr-en="Clean, responsive design tailored for web and mobile."
+           data-tr-tr="Web ve mobil için tasarlanmış sade, duyarlı tasarım.">
           Clean, responsive design tailored for web and mobile.
         </p>
       </div>
-      <div class="card">
+      <div class="card hoverable">
         <h3 data-tr-en="Authentication" data-tr-tr="Kimlik Doğrulama">Authentication</h3>
-        <p data-tr-en="Secure sign-in with Firebase Authentication using email/password." data-tr-tr="E-posta/şifre ile Firebase Authentication üzerinden güvenli giriş.">
+        <p data-tr-en="Secure sign-in with Firebase Authentication using email/password."
+           data-tr-tr="E-posta/şifre ile Firebase Authentication üzerinden güvenli giriş.">
           Secure sign-in with Firebase Authentication using email/password.
         </p>
       </div>

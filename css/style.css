@@ -145,13 +145,23 @@
       margin-top: 3rem;
       justify-content: center;
     }
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 2rem;
-      flex: 1 1 300px;
-      max-width: 360px;
-    }
+ .card {
+  background: rgba(255, 255, 255, 0.05); /* saydam beyaz */
+  backdrop-filter: blur(10px); /* camsı bulanıklık */
+  -webkit-backdrop-filter: blur(10px); /* Safari desteği */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* ince kenar çizgi */
+  border-radius: 16px;
+  padding: 2rem;
+  flex: 1 1 300px;
+  max-width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
     .card h3 {
       color: var(--mint);
       margin-bottom: 0.5rem;
