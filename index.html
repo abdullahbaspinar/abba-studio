@@ -19,7 +19,7 @@
     <nav id="mobileNav">
       <a href="#about" data-tr-en="About" data-tr-tr="Hakkımızda">About</a>
       <a href="#projects" data-tr-en="Projects" data-tr-tr="Projeler">Projects</a>
-      <a href="#contact" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
+      <a href="#contact-section" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
       <button class="btn-outline" onclick="toggleLang()">EN / TR</button>
     </nav>
   </header>
@@ -68,6 +68,22 @@
   </div>
 </div>
 
+  </section>
+
+  <section class="section" id="contact-section">
+    <h2 data-tr-en="Contact Us" data-tr-tr="Bize Ulaşın">Contact Us</h2>
+    <form action="mailto:abdullah@example.com" method="POST" enctype="text/plain">
+      <label for="name" data-tr-en="Your Name" data-tr-tr="Adınız">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email" data-tr-en="Your Email" data-tr-tr="E-posta Adresiniz">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message" data-tr-en="Your Message" data-tr-tr="Mesajınız">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn-primary" data-tr-en="Send" data-tr-tr="Gönder">Send</button>
+    </form>
   </section>
 
   <footer>
