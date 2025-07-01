@@ -264,3 +264,16 @@ form button[type="submit"] {
   width: 100%;
   display: block;
 }
+.app-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.app-gallery .screenshot img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
