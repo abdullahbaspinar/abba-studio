@@ -7,115 +7,188 @@
   <link rel="icon" type="image/png" href="/assets/logo/Abba_transparent.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .app-gallery-scroll {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 10px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .app-gallery-scroll .screenshot {
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .app-gallery-scroll .screenshot img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      background-color: #00f5a0;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    .logo-top {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo-top img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+  </style>
   <script src="/js/index.js" defer></script>
 </head>
 <body>
+
+  <!-- Üstte kare logo -->
+  <div class="logo-top">
+    <img src="/assets/logo/Abba_transparent.png" alt="Abba Studio" />
+  </div>
+
   <header class="navbar">
     <div class="logo">
       <a href="/index.html">
-        <img src="/assets/logo/Abba_transparent.png" alt="Abba Studio" />
+        <img src="/assets/logo/Abba_transparent.png" alt="Abba Studio" style="height: 40px;" />
       </a>
     </div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav id="mobileNav">
-      <a href="/index.html#about" data-tr-en="About" data-tr-tr="Hakkımızda">About</a>
-      <a href="/index.html#projects" data-tr-en="Projects" data-tr-tr="Projeler">Projects</a>
-      <a href="/index.html#contact-section" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
+      <a href="/index.html#about">About</a>
+      <a href="/index.html#projects">Projects</a>
+      <a href="/index.html#contact-section">Contact</a>
       <button class="btn-outline" onclick="toggleLang()">EN / TR</button>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="position: relative; overflow: hidden;">
-    <div style="
-      position: absolute;
-      inset: 0;
-      background-image: url('/assets/xoxGameMockup.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.85;
-      filter: blur(5px);
-      z-index: 0;
-    "></div>
-
+  <section class="hero" style="background: url('/assets/xoxGameMockup.png') center/cover no-repeat; filter: brightness(0.85);">
     <div style="position: relative; z-index: 1;">
-      <h1 data-tr-en="XOX with a Twist Mobile Game" data-tr-tr="XOX with a Twist Mobil Oyun">
-        XOX with a Twist Mobile Game
-      </h1>
-      <p data-tr-en="A neon-themed strategy game that redefines the classic Tic Tac Toe experience."
-         data-tr-tr="Klasik XOX deneyimini neon temalı stratejik bir oyunla yeniden tanımlayan mobil oyun.">
-        A neon-themed strategy game that redefines the classic Tic Tac Toe experience.
-      </p>
-      <a href="https://apps.apple.com/app/id000000000" class="btn-primary" target="_blank"
-         data-tr-en="View on App Store" data-tr-tr="App Store'da Görüntüle">
-        View on App Store
-      </a>
+      <h1>XOX with a Twist Mobile Game</h1>
+      <p>A neon-themed strategy game that redefines the classic Tic Tac Toe experience.</p>
+      <a href="https://apps.apple.com/app/id000000000" class="btn-primary" target="_blank">View on App Store</a>
     </div>
   </section>
 
   <!-- Features Section -->
   <section class="section">
-    <h2 data-tr-en="Key Features" data-tr-tr="Öne Çıkan Özellikler">Key Features</h2>
+    <h2>Key Features</h2>
     <div class="projects">
       <div class="card hoverable">
-        <h3 data-tr-en="Multiplayer Mode" data-tr-tr="Çok Oyunculu Mod">Multiplayer Mode</h3>
-        <p data-tr-en="Play with a friend on the same device with a unique interface layout."
-           data-tr-tr="Aynı cihazda arkadaşınızla oynayabileceğiniz, eşsiz arayüz yerleşimine sahip mod.">
-          Play with a friend on the same device with a unique interface layout.
-        </p>
+        <h3>Multiplayer Mode</h3>
+        <p>Play with a friend on the same device with a unique interface layout.</p>
       </div>
       <div class="card hoverable">
-        <h3 data-tr-en="AI Difficulty Levels" data-tr-tr="Zorluk Seviyeli Yapay Zeka">AI Difficulty Levels</h3>
-        <p data-tr-en="Choose from Easy, Mid, or Hard and test your strategy skills."
-           data-tr-tr="Kolay, Orta ve Zor seçenekleriyle stratejinizi test edin.">
-          Choose from Easy, Mid, or Hard and test your strategy skills.
-        </p>
+        <h3>AI Difficulty Levels</h3>
+        <p>Choose from Easy, Mid, or Hard and test your strategy skills.</p>
       </div>
       <div class="card hoverable">
-        <h3 data-tr-en="Daily Notifications" data-tr-tr="Günlük Bildirimler">Daily Notifications</h3>
-        <p data-tr-en="Smart reminders encourage you to return and play every 12 hours."
-           data-tr-tr="Akıllı hatırlatıcılar sayesinde her 12 saatte bir tekrar oynaman teşvik edilir.">
-          Smart reminders encourage you to return and play every 12 hours.
-        </p>
+        <h3>Daily Notifications</h3>
+        <p>Smart reminders encourage you to return and play every 12 hours.</p>
       </div>
     </div>
   </section>
 
-<!-- App Preview Gallery -->
-<section class="section">
-  <h2 data-tr-en="App Preview" data-tr-tr="Uygulama Önizlemesi">App Preview</h2>
-  <p data-tr-en="Take a closer look at the game through visuals and branding."
-     data-tr-tr="Oyunu ekran görüntüleri ve marka kimliğiyle yakından keşfedin.">
-     Take a closer look at the game through visuals and branding.
-  </p>
+  <!-- App Preview -->
+  <section class="section">
+    <h2>App Preview</h2>
+    <p>Take a closer look at the game through visuals and branding.</p>
 
-  <div class="app-gallery">
-    <div class="screenshot">
-      <img src="/assets/xox/xox_mockup_1.png" alt="Gameplay Screenshot 1" />
+    <div class="app-gallery-scroll">
+      <div class="screenshot">
+        <img src="/assets/xox/xox_mockup_1.png" alt="Screenshot 1" />
+      </div>
+      <div class="screenshot">
+        <img src="/assets/xox/xox_mockup_2.png" alt="Screenshot 2" />
+      </div>
+      <div class="screenshot">
+        <img src="/assets/xox/xox_mockup_3.png" alt="Screenshot 3" />
+      </div>
+      <div class="screenshot">
+        <img src="/assets/xox/xox_mockup_4.png" alt="Screenshot 4" />
+      </div>
+      <div class="screenshot">
+        <img src="/assets/xox/xox_mockup_5.png" alt="Screenshot 5" />
+      </div>
+      <div class="screenshot">
+        <img src="/assets/xox/xox_logo.png" alt="App Logo" />
+      </div>
     </div>
-    <div class="screenshot">
-      <img src="/assets/xox/xox_mockup_2.png" alt="Gameplay Screenshot 2" />
-    </div>
-    <div class="screenshot">
-      <img src="/assets/xox/xox_mockup_3.png" alt="Gameplay Screenshot 3" />
-    </div>
-    <div class="screenshot">
-      <img src="/assets/xox/xox_mockup_4.png" alt="Gameplay Screenshot 4" />
-    </div>
-    <div class="screenshot">
-      <img src="/assets/xox/xox_mockup_5.png" alt="Gameplay Screenshot 5" />
-    </div>
-    <div class="screenshot logo">
-      <img src="/assets/xox/xox_logo.png" alt="App Logo" />
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p data-tr-en="© 2025 Abba Studio. All rights reserved." data-tr-tr="© 2025 Abba Studio. Tüm hakları saklıdır.">
-      © 2025 Abba Studio. All rights reserved.
-    </p>
+    <p>© 2025 Abba Studio. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
