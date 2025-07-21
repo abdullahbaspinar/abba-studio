@@ -11,7 +11,8 @@
 
 </head>
 <body>
-  <header class="navbar">
+  <div class="bg-stars"></div>
+  <header class="navbar fade-in">
     <div class="logo">
       <img src="assets/logo/Abba_transparent.png" alt="Abba Studio" />
     </div>
@@ -20,13 +21,13 @@
       <a href="#about" data-tr-en="About" data-tr-tr="Hakkımızda">About</a>
       <a href="#projects" data-tr-en="Projects" data-tr-tr="Projeler">Projects</a>
       <a href="#contact-section" data-tr-en="Contact" data-tr-tr="İletişim">Contact</a>
-      <button class="btn-outline" onclick="toggleLang()">EN / TR</button>
+      <button class="btn-outline lang-toggle" onclick="toggleLang()">EN / TR</button>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1 id="hero-title" data-tr-en="We design web & mobile experiences" data-tr-tr="Web ve mobil deneyimler tasarlıyoruz">We design web & mobile experiences</h1>
-    <p id="hero-desc" data-tr-en="We craft beautiful and functional digital solutions for modern businesses." data-tr-tr="Modern işletmeler için güzel ve işlevsel dijital çözümler üretiyoruz.">We craft beautiful and functional digital solutions for modern businesses.</p>
+  <section class="hero fade-in">
+    <h1 id="hero-title" class="slide-up" data-tr-en="We design web & mobile experiences" data-tr-tr="Web ve mobil deneyimler tasarlıyoruz">We design web & mobile experiences</h1>
+    <p id="hero-desc" class="slide-up" data-tr-en="We craft beautiful and functional digital solutions for modern businesses." data-tr-tr="Modern işletmeler için güzel ve işlevsel dijital çözümler üretiyoruz.">We craft beautiful and functional digital solutions for modern businesses.</p>
     <button class="btn-primary" id="get-started" data-tr-en="Get Started" data-tr-tr="Başla">Get Started</button>
   </section>
 
@@ -40,24 +41,24 @@
     </div>
   </div>
 
-  <section class="section" id="about">
-    <h2 data-tr-en="About Us" data-tr-tr="Hakkımızda">About Us</h2>
+  <section class="section fade-in" id="about">
+    <h2 class="slide-up" data-tr-en="About Us" data-tr-tr="Hakkımızda">About Us</h2>
     <p data-tr-en="We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems." data-tr-tr="Abba Studio olarak, fikirleri tam donanımlı çapraz platform uygulamalara ve ölçeklenebilir web sistemlerine dönüştürmeye tutkuyla bağlı bir ekibiz.">We are Abba Studio – a team passionate about turning ideas into full-fledged cross-platform apps and scalable web systems.</p>
   </section>
 
-<section class="section" id="projects">
-  <h2 data-tr-en="Our Projects" data-tr-tr="Projelerimiz">Our Projects</h2>
+<section class="section fade-in" id="projects">
+  <h2 class="slide-up" data-tr-en="Our Projects" data-tr-tr="Projelerimiz">Our Projects</h2>
 
   <h3 style="text-align: center; margin-top: 3rem;" data-tr-en="Web Projects" data-tr-tr="Web Projeleri">Web Projects</h3>
   <div class="projects">
-    <div class="card hoverable" onclick="location.href='/view/Projects/semerciSigorta.html'" style="cursor: pointer;">
+    <div class="card hoverable slide-up" onclick="location.href='/view/Projects/semerciSigorta.html'" style="cursor: pointer;">
       <h3 data-tr-en="Semerci Insurance" data-tr-tr="Semerci Sigorta">Semerci Insurance</h3>
       <p data-tr-en="Corporate website for İsmail Semerci Sigorta Acenteliği." data-tr-tr="İsmail Semerci Sigorta Acenteliği için kurumsal web sitesi.">
         Corporate website for İsmail Semerci Sigorta Acenteliği.
       </p>
     </div>
 
-    <div class="card hoverable" onclick="location.href='/view/Projects/realtimeChat.html'" style="cursor: pointer;">
+    <div class="card hoverable slide-up" onclick="location.href='/view/Projects/realtimeChat.html'" style="cursor: pointer;">
       <h3 data-tr-en="Realtime Chat" data-tr-tr="Gerçek Zamanlı Sohbet">Realtime Chat</h3>
       <p data-tr-en="Instant messaging platform powered by Firebase with a sleek UI." data-tr-tr="Firebase destekli, şık arayüze sahip anlık mesajlaşma platformu.">
         Instant messaging platform powered by Firebase with a sleek UI.
@@ -67,7 +68,7 @@
 
   <h3 style="text-align: center; margin-top: 3rem;" data-tr-en="App Projects" data-tr-tr="Mobil Uygulamalar">App Projects</h3>
   <div class="projects">
-    <div class="card hoverable" onclick="location.href='/view/Projects/XOX_with_a_twist.html'" style="cursor: pointer;">
+    <div class="card hoverable slide-up" onclick="location.href='/view/Projects/XOX_with_a_twist.html'" style="cursor: pointer;">
       <h3 data-tr-en="XOX with a Twist" data-tr-tr="XOX with a Twist">XOX with a Twist</h3>
       <p data-tr-en="A modern and strategic tic-tac-toe game with neon UI." data-tr-tr="Neon arayüzlü modern ve stratejik bir XOX oyunu.">
         A modern and strategic tic-tac-toe game with neon UI.
@@ -81,8 +82,8 @@
   </div>
 </section>
 
-  <section class="section" id="contact-section">
-    <h2 data-tr-en="Contact Us" data-tr-tr="Bize Ulaşın">Contact Us</h2>
+  <section class="section fade-in" id="contact-section">
+    <h2 class="slide-up" data-tr-en="Contact Us" data-tr-tr="Bize Ulaşın">Contact Us</h2>
     <form action="mailto:abbastudio.tech@gmail.com" method="POST" enctype="text/plain">
       <label for="name" data-tr-en="Your Name" data-tr-tr="Adınız">Your Name</label>
       <input type="text" id="name" name="name" required />
@@ -97,7 +98,7 @@
     </form>
   </section>
 
-  <footer>
+  <footer class="fade-in">
     <p data-tr-en="© 2025 Abba Studio. All rights reserved." data-tr-tr="© 2025 Abba Studio. Tüm hakları saklıdır.">&copy; 2025 Abba Studio. All rights reserved.</p>
   </footer>
 
