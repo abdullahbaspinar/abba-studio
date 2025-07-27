@@ -151,37 +151,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Contact Form Handling
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            // Form verilerini al
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
             
-            // Basic validation
+            // Basit validasyon
             if (!name || !email || !message) {
                 showNotification('Lütfen tüm alanları doldurun.', 'error');
                 return;
             }
             
-            if (!isValidEmail(email)) {
-                showNotification('Lütfen geçerli bir e-posta adresi girin.', 'error');
-                return;
-            }
+            // Mail body'sini oluştur
+            const subject = 'Abba Studio - İletişim Formu';
+            const body = `Ad: ${name}\nE-posta: ${email}\n\nMesaj:\n${message}`;
             
-            // Simulate form submission
-            showNotification('Mesajınız gönderiliyor...', 'info');
+            // Mail uygulamasını aç
+            const mailtoLink = `mailto:abdullah@abbastudio.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('Teşekkürler! Mesajınız başarıyla gönderildi.', 'success');
-                contactForm.reset();
-            }, 2000);
+            // Mail uygulamasını aç
+            window.open(mailtoLink, '_blank');
+            
+            // Başarı mesajı göster
+            showNotification('Mail uygulamanız açıldı. Mesajınızı gönderebilirsiniz.', 'success');
+            
+            // Formu temizle
+            this.reset();
         });
     }
 });
